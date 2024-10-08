@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWS-Style Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Main Dashboard Container -->
+  <div class="flex h-screen">
+
+    <!-- Sidebar -->
+    <div class="w-1/5 bg-gray-900 text-white hidden md:block">
+      <div class="p-4">
+        <h2 class="text-2xl font-bold">AWS Services</h2>
+      </div>
+      <nav class="mt-6">
+        <ul>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">EC2 Instances</a>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">S3 Buckets</a>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">RDS Databases</a>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">CloudWatch</a>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">Lambda Functions</a>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">IAM Users</a>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">Billing</a>
+          </li>
+          <li class="px-4 py-2 hover:bg-gray-700">
+            <a href="#" class="block">Support</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="w-full md:w-4/5 flex flex-col">
+
+      <!-- Top Bar -->
+      <div class="bg-white shadow-md p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">AWS Dashboard</h1>
+        <div class="flex items-center space-x-4">
+          <input type="text" class="border p-2 rounded" placeholder="Search AWS Services">
+          <button class="bg-blue-500 text-white px-3 py-2 rounded hover:bg-blue-600">Account</button>
+        </div>
+      </div>
+
+      <!-- Dashboard Content -->
+      <div class="flex-grow p-6 bg-gray-100">
+        <!-- Dashboard Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Card 1 - EC2 Instances -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-bold mb-4">EC2 Instances</h2>
+            <p class="text-gray-700">Total Instances: 4</p>
+            <p class="text-green-500">Running: 3</p>
+            <p class="text-red-500">Stopped: 1</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Manage Instances</button>
+          </div>
+
+          <!-- Card 2 - S3 Buckets -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-bold mb-4">S3 Buckets</h2>
+            <p class="text-gray-700">Total Buckets: 8</p>
+            <p class="text-blue-500">Storage Used: 120 GB</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Manage Buckets</button>
+          </div>
+
+          <!-- Card 3 - RDS Databases -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-bold mb-4">RDS Databases</h2>
+            <p class="text-gray-700">Total Databases: 3</p>
+            <p class="text-green-500">Active: 2</p>
+            <p class="text-red-500">Inactive: 1</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Manage Databases</button>
+          </div>
+
+          <!-- Card 4 - CloudWatch -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-bold mb-4">CloudWatch Alerts</h2>
+            <p class="text-red-500">Critical Alerts: 2</p>
+            <p class="text-yellow-500">Warnings: 5</p>
+            <p class="text-green-500">Healthy: 10</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Alerts</button>
+          </div>
+
+          <!-- Card 5 - Lambda Functions -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-bold mb-4">Lambda Functions</h2>
+            <p class="text-gray-700">Total Functions: 6</p>
+            <p class="text-green-500">Active: 5</p>
+            <p class="text-red-500">Errors: 1</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Manage Functions</button>
+          </div>
+
+          <!-- Card 6 - Billing -->
+          <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-lg font-bold mb-4">Billing Summary</h2>
+            <p class="text-gray-700">Total Spend: $540.00</p>
+            <p class="text-green-500">Credits: $100.00</p>
+            <button class="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">View Billing</button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
