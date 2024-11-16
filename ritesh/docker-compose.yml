@@ -1,0 +1,16 @@
+services:
+  mariadb:
+    image: mariadb:10.5
+    container_name: mariadb
+    networks:
+      - frappe-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: frappe
+      MYSQL_USER: frappe_user
+      MYSQL_PASSWORD: frappe_password
+    ports:
+      - "3307:3306"
+networks:
+  frappe-network:
+    driver: bridge
