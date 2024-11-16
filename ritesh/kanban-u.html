@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board - User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #A0AEC0;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E2E8F0;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- Top Navigation Bar -->
+    <div class="bg-white shadow-md sticky top-0 left-0 w-full z-10 p-4 flex justify-between items-center">
+        <div class="text-gray-800 font-semibold text-xl">Kanban Board</div>
+        <div class="flex items-center space-x-4">
+            <img src="https://via.placeholder.com/40" alt="Profile Avatar" class="w-10 h-10 rounded-full border-2 border-gray-200">
+            <div>
+                <h3 class="font-semibold text-sm text-gray-700">John Doe</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kanban Board -->
+    <div class="p-6 flex space-x-4 overflow-x-auto h-screen">
+        <!-- To Do Column -->
+        <div class="w-1/3 bg-white shadow-lg rounded-xl p-4">
+            <h3 class="font-semibold text-lg text-gray-700">To Do</h3>
+            <div class="space-y-4 mt-4">
+                <div class="bg-gray-50 p-4 rounded-xl shadow-md hover:shadow-lg">
+                    <h4 class="font-semibold text-gray-800">Task 1</h4>
+                    <p class="text-sm text-gray-500">Deadline: 2024-11-20</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl shadow-md hover:shadow-lg">
+                    <h4 class="font-semibold text-gray-800">Task 2</h4>
+                    <p class="text-sm text-gray-500">Deadline: 2024-11-22</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- In Progress Column -->
+        <div class="w-1/3 bg-white shadow-lg rounded-xl p-4">
+            <h3 class="font-semibold text-lg text-gray-700">In Progress</h3>
+            <div class="space-y-4 mt-4">
+                <div class="bg-gray-50 p-4 rounded-xl shadow-md hover:shadow-lg">
+                    <h4 class="font-semibold text-gray-800">Task 3</h4>
+                    <p class="text-sm text-gray-500">Assigned to: Jane Smith</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Done Column -->
+        <div class="w-1/3 bg-white shadow-lg rounded-xl p-4">
+            <h3 class="font-semibold text-lg text-gray-700">Done</h3>
+            <div class="space-y-4 mt-4">
+                <div class="bg-gray-50 p-4 rounded-xl shadow-md hover:shadow-lg">
+                    <h4 class="font-semibold text-gray-800">Task 4</h4>
+                    <p class="text-sm text-gray-500">Completed by: John Doe</p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl shadow-md hover:shadow-lg">
+                    <h4 class="font-semibold text-gray-800">Task 5</h4>
+                    <p class="text-sm text-gray-500">Completed by: Jane Smith</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
